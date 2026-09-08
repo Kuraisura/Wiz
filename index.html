@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/favicon.ico" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#1e1b4b" />
+    <meta name="description" content="Wiz — AI-powered study companion" />
+    <title>Wiz</title>
+  </head>
+  <body>
+    <script>
+      // Polyfill Iterator global for Android WebView < v122 (ES2025 missing)
+      if (typeof Iterator === "undefined") {
+        var Iterator = { prototype: {} };
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+    <script>
+      // Register Service Worker for offline support
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

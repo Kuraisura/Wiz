@@ -1,0 +1,36 @@
+{
+  "name": "Flashcard",
+  "type": "object",
+  "properties": {
+    "quiz_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "front": {
+      "type": "string"
+    },
+    "back": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Hard",
+        "Good",
+        "Easy"
+      ]
+    },
+    "interval": {
+      "type": "string"
+    },
+    "mastered": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "front"
+  ]
+}

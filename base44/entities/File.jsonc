@@ -1,0 +1,44 @@
+{
+  "name": "File",
+  "type": "object",
+  "properties": {
+    "filename": {
+      "type": "string"
+    },
+    "file_type": {
+      "type": "string",
+      "enum": [
+        "PDF",
+        "DOCX",
+        "PPTX",
+        "EPUB"
+      ]
+    },
+    "file_size": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "folder": {
+      "type": "string"
+    },
+    "slide_count": {
+      "type": "number"
+    },
+    "comprehension_index": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Ready",
+        "Processing"
+      ],
+      "default": "Ready"
+    }
+  },
+  "required": [
+    "filename"
+  ]
+}

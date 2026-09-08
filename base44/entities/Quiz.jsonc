@@ -1,0 +1,50 @@
+{
+  "name": "Quiz",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "file_id": {
+      "type": "string"
+    },
+    "course_code": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "question_count": {
+      "type": "number"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Warmup",
+        "Standard",
+        "Exam Ready"
+      ]
+    },
+    "completion_status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Completed"
+      ],
+      "default": "Pending"
+    },
+    "score": {
+      "type": "number"
+    },
+    "study_time_hours": {
+      "type": "number"
+    },
+    "generated_date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
